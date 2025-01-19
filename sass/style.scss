@@ -106,3 +106,39 @@ body {
     }
   }
 }
+
+.section {
+  padding: 40px 0;
+
+  &__inner {
+    padding: 0 32px;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &__head-main {
+    font-size: 40px;
+    letter-spacing: 0.1em;
+  }
+
+  &__head-sub {
+    font-size: 12px;
+  }
+
+  &__lead-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 32px;
+  }
+
+  &__contents {
+    margin-top: 40px;
+  }
+}
