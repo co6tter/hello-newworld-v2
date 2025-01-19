@@ -94,3 +94,37 @@ body.is-fixed {
 .header__nav-item + .header__nav-item {
   margin-top: 24px;
 }
+
+.section {
+  padding: 40px 0;
+}
+.section__inner {
+  padding: 0 32px;
+}
+.section__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.section--center {
+  text-align: center;
+}
+.section__head-main {
+  font-size: 40px;
+  letter-spacing: 0.1em;
+}
+.section__head-sub {
+  font-size: 12px;
+}
+.section__lead-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 32px;
+}
+.section__contents {
+  margin-top: 40px;
+}
