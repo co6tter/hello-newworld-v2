@@ -10,6 +10,12 @@ body {
   }
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
 .button {
   display: flex;
   align-items: center;
@@ -134,7 +140,7 @@ body {
   &__heading-sub {
     margin-top: 12px;
     display: block;
-    font-size: 14px;
+    line-height: 1.5;
   }
 }
 
@@ -148,10 +154,10 @@ body {
   &__head {
     display: flex;
     flex-direction: column;
-  }
 
-  &--center {
-    text-align: center;
+    &--center {
+      text-align: center;
+    }
   }
 
   &__head-main {
@@ -161,11 +167,11 @@ body {
 
   &__head-sub {
     font-size: 12px;
+    margin-top: 4px;
   }
 
   &__lead-text {
-    font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.5;
     margin-top: 32px;
   }
 
@@ -207,7 +213,7 @@ body {
 
   &__item-img {
     img {
-      box-shadow: 0 4px 15px rgba(color.$black, 0.15);
+      box-shadow: 0 4px 15px 0 rgba(color.$black, 0.15);
     }
   }
 
@@ -217,7 +223,7 @@ body {
   }
 
   &__item-link {
-    margin-top: 8px;
+    margin-top: 12px;
     display: inline-block;
     text-decoration: underline;
   }
@@ -226,8 +232,12 @@ body {
 .about {
   &__img {
     img {
-      box-shadow: 0 4px 15px rgba(color.$black, 0.15);
+      box-shadow: 0 4px 15px 0 rgba(color.$black, 0.15);
     }
+  }
+
+  &__text-contents {
+    margin-top: 32px;
   }
 
   &__text {
@@ -283,8 +293,7 @@ body {
   }
 
   &__item-text {
-    font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.5;
     margin-top: 12px;
   }
 }
@@ -299,6 +308,10 @@ body {
   &__text-contents {
     margin-top: 32px;
   }
+
+  &__text {
+    margin-top: 32px;
+  }
 }
 
 .page-bottom {
@@ -311,6 +324,10 @@ body {
       background-color: color.$bg-gray-l;
     }
   }
+
+  &__button {
+    margin-top: 32px;
+  }
 }
 
 .footer {
@@ -320,5 +337,183 @@ body {
   &__copy {
     font-size: 12px;
     font-family: "Noto Sans JP", sans-serif;
+  }
+}
+
+@include breakpoints.mq(pc) {
+  .wrapper {
+    display: flex;
+  }
+
+  .main {
+    flex-basis: 79.2%;
+  }
+
+  .header {
+    position: relative;
+    flex-basis: 20.8%;
+    padding: 50px 20px;
+
+    &__container {
+      width: 160px;
+      margin: 0 auto;
+      position: sticky;
+      top: 50px;
+    }
+
+    &__logo {
+      font-size: 30px;
+      letter-spacing: 0.12em;
+      line-height: 1;
+    }
+
+    &__menu-button {
+      display: none;
+    }
+
+    &__contents {
+      border: none;
+      display: block;
+    }
+  }
+
+  .button {
+    transition: background 0.3s, color 0.3s, opacity 0.3s;
+
+    &:hover {
+      background: color.$white;
+
+      .button__icon-path {
+        fill: color.$bg-dark;
+      }
+
+      .button__text {
+        color: color.$bg-dark;
+      }
+    }
+
+    &--bg {
+      color: color.$bg-dark;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .section {
+    &__inner {
+      max-width: calc(880px + 32px * 2);
+      margin: 0 auto;
+    }
+
+    &__head {
+      margin-bottom: 24px;
+    }
+
+    &__head-main {
+      font-size: 60px;
+    }
+  }
+
+  .fv {
+    &__contents {
+      background: url(../img/bg_fv.png) center center no-repeat;
+      background-size: 100% auto;
+      bottom: 100px;
+      left: 0;
+      max-width: 627px;
+      height: 174px;
+      padding-top: 24px;
+      padding-left: 96px;
+    }
+  }
+
+  .service {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8%;
+    }
+
+    &__item {
+      & + & {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .works {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8%;
+    }
+
+    &__item {
+      & + & {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .about {
+    &__container {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 40px;
+    }
+  }
+
+  .flow {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    &__item {
+      & + & {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .message {
+    &__container {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 40px;
+    }
+  }
+
+  .page-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__item {
+      padding: 54px 10px;
+    }
+  }
+}
+
+@include breakpoints.mq(tb) {
+  .section {
+    &__head-main {
+      font-size: 54px;
+    }
+  }
+
+  .fv {
+    &__contents {
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+  }
+  .flow {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 16px;
+    }
   }
 }
