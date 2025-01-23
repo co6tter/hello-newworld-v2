@@ -198,6 +198,7 @@ img {
 }
 
 .about__img img {
+  width: 100%;
   -webkit-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
@@ -261,6 +262,7 @@ img {
 }
 
 .message__img img {
+  width: 100%;
   -webkit-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
@@ -279,6 +281,9 @@ img {
 }
 .page-bottom__item--contact {
   background-color: #6f6f6f;
+}
+.page-bottom__item--others {
+  background-color: #4a4a4a;
 }
 .page-bottom__button {
   margin-top: 32px;

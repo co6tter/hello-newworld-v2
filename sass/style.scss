@@ -232,6 +232,7 @@ img {
 .about {
   &__img {
     img {
+      width: 100%;
       box-shadow: 0 4px 15px 0 rgba(color.$black, 0.15);
     }
   }
@@ -301,6 +302,7 @@ img {
 .message {
   &__img {
     img {
+      width: 100%;
       box-shadow: 0 4px 15px 0 rgba(color.$black, 0.15);
     }
   }
@@ -322,6 +324,10 @@ img {
 
     &--contact {
       background-color: color.$bg-gray-l;
+    }
+
+    &--others {
+      background-color: color.$bg-dark;
     }
   }
 
@@ -510,6 +516,7 @@ img {
       transform: translateY(50%);
     }
   }
+
   .flow {
     &__list {
       grid-template-columns: repeat(2, 1fr);
